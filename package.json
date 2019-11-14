@@ -11,6 +11,7 @@
   "scripts": {
     "start": "react-scripts start",
     "ts": "tsc",
+    "dev": "concurrently -k \"npm run start\" \"npm run ts\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -31,13 +32,14 @@
     ]
   },
   "devDependencies": {
-    "eslint-config-prettier": "^6.5.0",
-    "eslint-plugin-prettier": "^3.1.1",
-    "eslint-plugin-react": "^7.16.0",
-    "prettier": "^1.19.1",
     "@types/jest": "24.0.23",
     "@types/node": "12.12.7",
     "@types/react": "16.9.11",
-    "@types/react-dom": "16.9.4"
+    "@types/react-dom": "16.9.4",
+    "concurrently": "^5.0.0",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.16.0",
+    "prettier": "^1.19.1"
   }
 }
