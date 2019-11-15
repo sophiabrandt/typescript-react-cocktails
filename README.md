@@ -13,9 +13,10 @@
 
 > simple React example with TypeScript
 
-My experiment in creating something simple with React _and_ TypeScript.
+My experiment in creating something simple with React _and_ TypeScript. Bootstrapped with `create-react-app`.  
+The project is a simple demo for learning purposes.
 
-Follows Chris Hawke's tutorial on [Youtube](https://youtu.be/nCoQg5qbLcY).
+It loosely follows Chris Hawke's tutorial on [Youtube](https://youtu.be/nCoQg5qbLcY).
 
 If you want to learn more about React with TypeScript, check out the **[React+TypeScript Cheatsheets](https://github.com/typescript-cheatsheets/react-typescript-cheatsheet#reacttypescript-cheatsheets)**.
 
@@ -28,8 +29,10 @@ npm install
 ## Usage
 
 ```sh
-npm run start
+npm run dev
 ```
+
+The command will run the Typescript compiler, which watches for changes in `.tsx` files, and the `react-scripts start` script for the React development server.
 
 ## Run tests
 
@@ -52,7 +55,7 @@ Give a ⭐️ if this project helped you!
 ## 📝 License
 
 Copyright © 2019 Chris Hawkes & Sophia Brandt.<br />
-This project is [MIT](https://choosealicense.com/licenses/mit/) licensed.
+This project is [MIT](LICENSE.txt) licensed.
 
 ---
 
