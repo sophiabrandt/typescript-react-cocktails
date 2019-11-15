@@ -17,6 +17,8 @@ const SearchForm: React.FC = () => (
           autoCapitalize="none"
           autoCorrect="off"
           required
+          // pattern checks if at least 3 characters are
+          // typed in, the first character must be alphanumeric
           pattern="([a-zA-Z].*?){3}"
         />
         <button type="submit" className="button">
