@@ -8,16 +8,16 @@ const SearchForm: React.FC = () => (
       className="[ search__form ] [ flow ]"
       method="POST"
     >
-      <label htmlFor="text">Search Cocktails</label>
+      <label htmlFor="search">Search Cocktails</label>
       <div className="inline-field-control">
         <input
-          type="email"
-          name="email"
-          id="email"
+          type="text"
+          name="search"
+          id="search"
           autoCapitalize="none"
           autoCorrect="off"
           required
-          pattern="[^@]+@[^\.]+\..+"
+          pattern="([a-zA-Z].*?){3}"
         />
         <button type="submit" className="button">
           <span className="visually-hidden">Search Cocktails</span>
