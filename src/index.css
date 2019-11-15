@@ -35,6 +35,25 @@ h1 {
   color: var(--color-primary);
   line-height: 1.1;
 }
+
+input[type],
+button {
+  border: none;
+  margin: 0;
+  font: inherit;
+  line-height: 1;
+  padding: 0.8rem;
+  padding: var(--metric-interaction-padding);
+  outline-offset: -1px;
+}
+
+@media screen and (-ms-high-contrast: active) {
+  input[type],
+  button {
+    border: 1px solid;
+  }
+}
+
 /**
  * FLOW UTILITY
  */
@@ -45,4 +64,26 @@ h1 {
 .flow > * + * {
   margin-top: 1em;
   margin-top: var(--flow-space);
+}
+
+/**
+ * GLOBAL FOCUS
+ */
+:focus {
+  outline: 1px solid var(--color-primary);
+}
+
+/**
+ * BUTTON COMPONENT
+ */
+.button {
+  background: var(--color-secondary);
+  color: var(--color-primary);
+  font-size: 1.6rem;
+  min-width: 3.5rem;
+  cursor: pointer;
+}
+
+.button:hover {
+  filter: brightness(1.05);
 }
