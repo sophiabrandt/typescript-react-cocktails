@@ -16,8 +16,6 @@
 My experiment in creating something simple with React _and_ TypeScript. Bootstrapped with `create-react-app`.  
 The project is a simple demo for learning purposes.
 
-It loosely follows Chris Hawke's tutorial on [Youtube](https://youtu.be/nCoQg5qbLcY).
-
 If you want to learn more about React with TypeScript, check out the **[React+TypeScript Cheatsheets](https://github.com/typescript-cheatsheets/react-typescript-cheatsheet#reacttypescript-cheatsheets)**.
 
 ## Install
@@ -54,7 +52,7 @@ Give a ⭐️ if this project helped you!
 
 ## 📝 License
 
-Copyright © 2019 Chris Hawkes & Sophia Brandt.<br />
+Copyright © 2019 Sophia Brandt.<br />
 This project is [MIT](LICENSE.txt) licensed.
 
 ---
