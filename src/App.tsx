@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from './components/header';
 import SearchForm from './components/searchForm';
 
 type Cocktail = {
@@ -18,9 +17,7 @@ const App: React.FC = () => {
   return (
     <main className="center text-center">
       <div className="[ flow ]">
-        <h1 className="App-header">
-          <Header text="Search Cocktails" />
-        </h1>
+        <h1 className="search__heading">TypeScript Cocktail Search</h1>
         <SearchForm />
         <section className="list">
           <ul className="[flow]">

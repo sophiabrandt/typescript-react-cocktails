@@ -7,6 +7,10 @@
   --color-bg: #f9f7f3;
   --color-text: #252525;
   --color-light: #f3f3f3;
+  --color-success: #067973;
+  --color-success-bg: #f5fffe;
+  --color-error: #b71540;
+  --color-error-bg: #fdeff3;
   --color-shadow: rgba(23, 11, 41, 0.12);
   --font-base-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
@@ -35,6 +39,12 @@ h1 {
   font-weight: 900;
   color: var(--color-primary);
   line-height: 1.1;
+}
+
+label {
+  color: var(--color-primary);
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 input[type],
@@ -113,8 +123,47 @@ button {
   outline: 1px solid var(--color-primary);
 }
 
+/** 
+ * VISUALLY HIDDEN UTILITY
+ */
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
 /**
- * BUTTON COMPONENT
+ * SEARCH
+ */
+.search {
+  max-width: 20rem;
+}
+
+.search__form + .search__alert {
+  --flow-space: 1rem;
+}
+
+/** 
+ * INLINE FIELD CONTROL
+ */
+.inline-field-control {
+  --flow-space: 0.5rem;
+  display: flex;
+  box-shadow: 0 2px 10px var(--color-shadow);
+}
+
+.inline-field-control input {
+  flex: auto;
+}
+
+/**
+ * BUTTON
  */
 .button {
   background: var(--color-secondary);
@@ -126,4 +175,62 @@ button {
 
 .button:hover {
   filter: brightness(1.05);
+}
+
+.button svg {
+  transform: translateY(1px); /* Optical adjustment */
+}
+
+/** 
+ * ALERT COMPONENT
+ */
+.alert {
+  --alert-text: var(--color-text);
+  --alert-bg: var(--color-bg);
+
+  display: flex;
+  align-items: flex-start;
+  background: var(--alert-bg);
+  color: var(--alert-text);
+  border: 1px solid;
+  padding: var(--metric-box-padding);
+  margin-top: 1rem;
+  animation: slide-up 250ms ease;
+}
+
+.alert[data-state='error'] {
+  --alert-text: var(--color-error);
+  --alert-bg: var(--color-error-bg);
+}
+
+.alert[data-state='success'] {
+  --alert-text: var(--color-success);
+  --alert-bg: var(--color-success-bg);
+}
+
+.alert__icon {
+  font-size: 1.6em;
+  flex-shrink: 0;
+}
+
+.alert__content {
+  padding-left: 0.8rem;
+}
+
+.alert__content b {
+  display: block;
+}
+
+/**
+ * ANIMATIONS
+ */
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(0.4rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
