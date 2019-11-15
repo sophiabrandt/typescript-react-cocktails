@@ -1,47 +1,35 @@
 import React from 'react';
 import SearchForm from './components/searchForm';
 
-type Cocktail = {
-  cocktailId: string;
-  cocktailName: string;
-};
-
-const dummyCocktails: Cocktail[] = [
-  { cocktailId: '11007', cocktailName: 'Margarita' },
-  { cocktailId: '5652', cocktailName: 'Rum Coke' },
-  { cocktailId: '7876', cocktailName: 'Caipirinha' },
-  { cocktailId: '1572', cocktailName: 'Long Island Ice Tea' },
-];
-
 type AppState = {
   isLoading: boolean;
   isError: boolean;
-  cocktails: Cocktail[];
+  cocktails: Array<any>;
 };
 
 type Action =
-  | { type: 'FETCH_INIT'; payload: string }
-  | { type: 'FETCH_SUCCESS'; payload: Cocktail[] }
-  | { type: 'FETCH_FAILURE'; payload: string };
+  | { type: 'LOADING_COCKTAILS' }
+  | { type: 'ERROR_LOADING_COCKTAILS' }
+  | { type: 'LOADED_COCKTAILS'; payload: Array<string> };
 
 function reducer(state: AppState, action: Action): AppState {
   switch (action.type) {
-    case 'FETCH_INIT':
+    case 'LOADING_COCKTAILS':
       return {
         ...state,
         isLoading: true,
       };
-    case 'FETCH_SUCCESS':
-      return {
-        ...state,
-        isLoading: false,
-        cocktails: action.payload,
-      };
-    case 'FETCH_FAILURE':
+    case 'ERROR_LOADING_COCKTAILS':
       return {
         ...state,
         isLoading: false,
         isError: true,
+      };
+    case 'LOADED_COCKTAILS':
+      return {
+        ...state,
+        isLoading: false,
+        cocktails: action.payload,
       };
     default:
       return state;
@@ -49,13 +37,31 @@ function reducer(state: AppState, action: Action): AppState {
 }
 
 const App: React.FC = () => {
-  const initialData: AppState = {
-    isLoading: false,
+  const [state, dispatch] = React.useReducer(reducer, {
     isError: false,
+    isLoading: false,
     cocktails: [],
-  };
-  const [state, dispatch] = React.useReducer(reducer, initialData);
+  });
   const [searchTerm, setSearchTerm] = React.useState('');
+
+  React.useEffect(() => {
+    const fetchCocktails = async (): Promise<any> => {
+      dispatch({ type: 'LOADING_COCKTAILS' });
+      try {
+        const response = await fetch(
+          `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchTerm}`,
+        );
+        const jsonResponse = await response.json();
+        dispatch({ type: 'LOADED_COCKTAILS', payload: jsonResponse.drinks });
+      } catch (error) {
+        dispatch({ type: 'ERROR_LOADING_COCKTAILS' });
+      }
+    };
+
+    fetchCocktails();
+  }, [searchTerm]);
+
+  console.log(state);
 
   return (
     <main className="center text-center">
@@ -64,14 +70,19 @@ const App: React.FC = () => {
         <SearchForm setSearchTerm={setSearchTerm} />
         <section className="list">
           <ul className="[flow]">
-            {dummyCocktails.map((cocktail, index) => (
-              <li
-                className={`box ${index % 2 !== 0 && 'box__invert'}`}
-                key={cocktail.cocktailId}
-              >
-                {cocktail.cocktailName}
-              </li>
-            ))}
+            {state.isError && <p>An error occured.</p>}
+            {state.isLoading ? (
+              <p>Loading>..</p>
+            ) : (
+              state.cocktails.map((cocktail, index) => (
+                <li
+                  className={`box ${index % 2 !== 0 && 'box__invert'}`}
+                  key={cocktail.idDrink}
+                >
+                  {cocktail.strDrink}
+                </li>
+              ))
+            )}
           </ul>
         </section>
       </div>
