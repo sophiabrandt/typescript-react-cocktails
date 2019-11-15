@@ -13,12 +13,55 @@ const dummyCocktails: Cocktail[] = [
   { cocktailId: '1572', cocktailName: 'Long Island Ice Tea' },
 ];
 
+type AppState = {
+  isLoading: boolean;
+  isError: boolean;
+  cocktails: Cocktail[];
+};
+
+type Action =
+  | { type: 'FETCH_INIT'; payload: string }
+  | { type: 'FETCH_SUCCESS'; payload: Cocktail[] }
+  | { type: 'FETCH_FAILURE'; payload: string };
+
+function reducer(state: AppState, action: Action): AppState {
+  switch (action.type) {
+    case 'FETCH_INIT':
+      return {
+        ...state,
+        isLoading: true,
+      };
+    case 'FETCH_SUCCESS':
+      return {
+        ...state,
+        isLoading: false,
+        cocktails: action.payload,
+      };
+    case 'FETCH_FAILURE':
+      return {
+        ...state,
+        isLoading: false,
+        isError: true,
+      };
+    default:
+      return state;
+  }
+}
+
 const App: React.FC = () => {
+  const initialData: AppState = {
+    isLoading: false,
+    isError: false,
+    cocktails: [],
+  };
+  const [state, dispatch] = React.useReducer(reducer, initialData);
+  const [searchTerm, setSearchTerm] = React.useState('');
+
   return (
     <main className="center text-center">
       <div className="[ flow ]">
         <h1 className="search__heading">TypeScript Cocktail Search</h1>
-        <SearchForm />
+        <SearchForm setSearchTerm={setSearchTerm} />
         <section className="list">
           <ul className="[flow]">
             {dummyCocktails.map((cocktail, index) => (
