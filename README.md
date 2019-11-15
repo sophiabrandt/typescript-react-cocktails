@@ -55,6 +55,10 @@ Give a ⭐️ if this project helped you!
 Copyright © 2019 Sophia Brandt.<br />
 This project is [MIT](LICENSE.txt) licensed.
 
+## Acknowlegments
+
+CSS and HTML from [Front-End Challenges Club](https://front-end-challenges.club/).
+
 ---
 
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
