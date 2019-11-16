@@ -7,6 +7,13 @@ type SearchFormProps = {
 export default function SearchForm({
   setSearchTerm,
 }: SearchFormProps): JSX.Element {
+  const [inputTerm, setInputTerm] = React.useState('');
+
+  function handleSubmit(evt: React.SyntheticEvent): void {
+    evt.preventDefault();
+    setSearchTerm(inputTerm);
+  }
+
   return (
     <>
       <form
@@ -14,6 +21,7 @@ export default function SearchForm({
         action="/"
         className="[ search__form ] [ flow ]"
         method="POST"
+        onSubmit={(evt): void => handleSubmit(evt)}
       >
         <label htmlFor="search">Search Cocktails</label>
         <div className="inline-field-control">
@@ -27,7 +35,7 @@ export default function SearchForm({
             // pattern checks if at least 3 characters or digits
             // are typed in
             pattern="([a-zA-Z0-9].*?){3}"
-            onChange={(evt): void => setSearchTerm(evt.target.value)}
+            onChange={(evt): void => setInputTerm(evt.target.value)}
           />
           <button type="submit" className="button">
             <span className="visually-hidden">Search Cocktails</span>

@@ -41,7 +41,7 @@ const App: React.FC = () => {
     status: 'LOADING_COCKTAILS',
   });
 
-  const [searchTerm, setSearchTerm] = React.useState('');
+  const [searchTerm, setSearchTerm] = React.useState('Margarita');
 
   React.useEffect(() => {
     const fetchCocktails = async (): Promise<any> => {
@@ -75,8 +75,8 @@ const App: React.FC = () => {
             {state.status === 'ERROR_LOADING_COCKTAILS' && (
               <p>An error occured.</p>
             )}
-            {state.status === 'LOADING_COCKTAILS' && <p>Loading>..</p>}
-            {state.status === 'LOADED_COCKTAILS' &&
+            {state.status === 'LOADING_COCKTAILS' && <p>Loading...</p>}
+            {state.status === 'LOADED_COCKTAILS' && state.cocktails ? (
               state.cocktails.map((cocktail: Cocktail, index: number) => (
                 <li
                   className={`box ${index % 2 !== 0 && 'box__invert'}`}
@@ -84,7 +84,10 @@ const App: React.FC = () => {
                 >
                   {cocktail.strDrink}
                 </li>
-              ))}
+              ))
+            ) : (
+              <p>No result.</p>
+            )}
           </ul>
         </section>
       </div>
