@@ -26,7 +26,7 @@ export default function SearchForm({
             required
             // pattern checks if at least 3 characters or digits
             // are typed in
-            pattern="([a-z0-9])3}/i"
+            pattern="([a-zA-Z0-9].*?){3}"
             onChange={(evt): void => setSearchTerm(evt.target.value)}
           />
           <button type="submit" className="button">
