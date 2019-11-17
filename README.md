@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to simple-ts-react-app 👋</h1>
+<h1 align="center">Welcome to TypeScript React Cocktails 👋</h1>
 <p>
   <a href="https://www.npmjs.com/package/simple-ts-react-app" target="_blank">
     <img alt="Version" src="https://img.shields.io/npm/v/simple-ts-react-app.svg">
@@ -15,6 +15,8 @@
 
 My experiment in creating something simple with React _and_ TypeScript. Bootstrapped with `create-react-app`.  
 The project is a simple demo for learning purposes.
+
+It fetches data from the [Cocktail Db API][cocktaildb].
 
 If you want to learn more about React with TypeScript, check out the **[React+TypeScript Cheatsheets](https://github.com/typescript-cheatsheets/react-typescript-cheatsheet#reacttypescript-cheatsheets)**.
 
@@ -62,3 +64,5 @@ CSS and HTML from [Front-End Challenges Club](https://front-end-challenges.club/
 ---
 
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
+
+[cocktaildb]: https://www.thecocktaildb.com/api.php
