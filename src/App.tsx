@@ -43,12 +43,20 @@ const App: React.FC = () => {
 
   const [searchTerm, setSearchTerm] = React.useState('Margarita');
 
+  const abortController = React.useRef(new AbortController());
+
   React.useEffect(() => {
     const fetchCocktails = async (): Promise<any> => {
+      // abort the previous request to avoid
+      // unnecessary data fetching
+      abortController.current.abort();
+      abortController.current = new AbortController();
+
       dispatch({ type: 'LOADING_COCKTAILS' });
       try {
         const response = await fetch(
           `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchTerm}`,
+          { signal: abortController.current.signal },
         );
         const jsonResponse = await response.json();
         dispatch({
@@ -61,9 +69,11 @@ const App: React.FC = () => {
     };
 
     fetchCocktails();
-  }, [searchTerm]);
 
-  console.log(state);
+    return (): void => {
+      abortController.current.abort();
+    };
+  }, [searchTerm]);
 
   return (
     <main className="center text-center">
