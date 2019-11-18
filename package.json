@@ -2,9 +2,10 @@
   "name": "simple-ts-react-app",
   "version": "1.0.0",
   "private": true,
+  "homepage": "https://sophiabrandt.github.io/typescript-react-cocktails",
   "dependencies": {
-    "react": "^16.11.0",
-    "react-dom": "^16.11.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
     "react-scripts": "3.2.0",
     "typescript": "3.7.2"
   },
@@ -14,7 +15,9 @@
     "dev": "concurrently -k \"npm run ts\" \"npm run start\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -39,9 +42,10 @@
     "@typescript-eslint/eslint-plugin": "^2.7.0",
     "@typescript-eslint/parser": "^2.7.0",
     "concurrently": "^5.0.0",
-    "eslint-config-prettier": "^6.5.0",
+    "eslint-config-prettier": "^6.6.0",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.16.0",
+    "gh-pages": "^2.1.1",
     "prettier": "^1.19.1"
   }
 }
