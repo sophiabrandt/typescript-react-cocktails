@@ -20,6 +20,10 @@ It fetches data from the [Cocktail Db API][cocktaildb].
 
 If you want to learn more about React with TypeScript, check out the **[React+TypeScript Cheatsheets](https://github.com/typescript-cheatsheets/react-typescript-cheatsheet#reacttypescript-cheatsheets)**.
 
+## ✨ Demo
+
+A live demo is deployed to **[GitHub pages](https://sophiabrandt.github.io/typescript-react-cocktails/)**.
+
 ## Install
 
 ```sh
