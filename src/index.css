@@ -195,7 +195,6 @@ button {
   border: 1px solid;
   padding: var(--metric-box-padding);
   margin-top: 1rem;
-  animation: slide-up 250ms ease;
 }
 
 .alert[data-state='error'] {
@@ -219,18 +218,4 @@ button {
 
 .alert__content b {
   display: block;
-}
-
-/**
- * ANIMATIONS
- */
-@keyframes slide-up {
-  0% {
-    opacity: 0;
-    transform: translateY(0.4rem);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
