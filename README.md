@@ -75,7 +75,7 @@ This project is [MIT](LICENSE.txt) licensed.
 
 ## Acknowlegments
 
-CSS and HTML from [Front-End Challenges Club](https://front-end-challenges.club/).
+CSS, HTML, and the Javascript form validation function are from the [Front-End Challenges Club](https://front-end-challenges.club/).
 
 ---
 
