@@ -1,8 +1,5 @@
 <h1 align="center">Welcome to TypeScript React Cocktails 👋</h1>
 <p>
-  <a href="https://www.npmjs.com/package/simple-ts-react-app" target="_blank">
-    <img alt="Version" src="https://img.shields.io/npm/v/simple-ts-react-app.svg">
-  </a>
   <a href="https://choosealicense.com/licenses/mit/" target="_blank">
     <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
   </a>
