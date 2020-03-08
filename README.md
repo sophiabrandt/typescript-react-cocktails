@@ -10,10 +10,11 @@
 
 > simple React example with TypeScript
 
-My experiment in creating something simple with React _and_ TypeScript. Bootstrapped with `create-react-app`.  
-The project is a simple demo for learning purposes.
-
+My experiment in creating a basic application with React _and_ TypeScript. Bootstrapped with `create-react-app`.  
 It fetches data from the [Cocktail Db API][cocktaildb].
+
+The project is a simple demo for learning purposes.  
+I have some experience with [ReasonReact](https://github.com/sophiabrandt/reason-music-player), and I wanted to see how TypeScript compares to Reason.
 
 If you want to learn more about React with TypeScript, check out the **[React+TypeScript Cheatsheets](https://github.com/typescript-cheatsheets/react-typescript-cheatsheet#reacttypescript-cheatsheets)**.
 
