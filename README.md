@@ -3,6 +3,9 @@
   <a href="https://choosealicense.com/licenses/mit/" target="_blank">
     <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
   </a>
+  <a href="https://github.com/sophiabrandt/typescript-react-cocktails/commits/master" target="_blank">
+    <img alt="Build Status" src="https://img.shields.io/github/workflow/status/sophiabrandt/typescript-react-cocktails/Build%20TypeScript?logo=Github-Actions" />
+  </a>
   <a href="https://twitter.com/hisophiabrandt" target="_blank">
     <img alt="Twitter: hisophiabrandt" src="https://img.shields.io/twitter/follow/hisophiabrandt.svg?style=social" />
   </a>
