@@ -92,7 +92,11 @@ const App: React.FC = () => {
                   className={`box ${index % 2 !== 0 && 'box__invert'}`}
                   key={cocktail.idDrink}
                 >
-                  {cocktail.strDrink}
+                  <a
+                    href={`https://www.thecocktaildb.com/drink/${cocktail.idDrink}-${cocktail.strDrink}`}
+                  >
+                    {cocktail.strDrink}
+                  </a>
                 </li>
               ))
             ) : (
