@@ -17,7 +17,7 @@ type Cocktail = {
 };
 
 function reducer(
-  state: AppState<any>,
+  state: AppState<Cocktail[]>,
   action: Action<Cocktail[]>,
 ): AppState<Cocktail[]> {
   switch (action.type) {
