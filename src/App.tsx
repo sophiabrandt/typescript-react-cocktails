@@ -16,7 +16,10 @@ type Cocktail = {
   strDrink: string;
 };
 
-function reducer(state: AppState<string>, action: Action<any>): AppState<any> {
+function reducer(
+  state: AppState<any>,
+  action: Action<Cocktail[]>,
+): AppState<Cocktail[]> {
   switch (action.type) {
     case 'LOADING_COCKTAILS':
       return {
@@ -46,7 +49,7 @@ const App: React.FC = () => {
   const abortController = React.useRef(new AbortController());
 
   React.useEffect(() => {
-    const fetchCocktails = async (): Promise<any> => {
+    const fetchCocktails = async (): Promise<void> => {
       // abort the previous request to avoid
       // unnecessary data fetching
       abortController.current.abort();
