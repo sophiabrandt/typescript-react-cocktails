@@ -84,7 +84,7 @@ const App: React.FC = () => {
         <h1 className="search__heading">TypeScript Cocktail Search</h1>
         <SearchForm setSearchTerm={setSearchTerm} />
         <section className="list">
-          <ul className="[flow]">
+          <ul>
             {state.status === 'ERROR_LOADING_COCKTAILS' && (
               <p>An error occured.</p>
             )}
