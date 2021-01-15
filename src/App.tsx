@@ -32,7 +32,7 @@ function reducer(
     case 'LOADED_COCKTAILS':
       return {
         status: 'LOADED_COCKTAILS',
-        cocktails: action.payload as Cocktail[],
+        cocktails: action.payload,
       };
     default:
       return state;
