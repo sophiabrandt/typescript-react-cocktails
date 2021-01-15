@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/typescript-react-cocktails/static/css/main.c0257e38.chunk.css",
-    "main.js": "/typescript-react-cocktails/static/js/main.1946ba56.chunk.js",
-    "main.js.map": "/typescript-react-cocktails/static/js/main.1946ba56.chunk.js.map",
+    "main.js": "/typescript-react-cocktails/static/js/main.94387aa7.chunk.js",
+    "main.js.map": "/typescript-react-cocktails/static/js/main.94387aa7.chunk.js.map",
     "runtime-main.js": "/typescript-react-cocktails/static/js/runtime-main.a906f6ab.js",
     "runtime-main.js.map": "/typescript-react-cocktails/static/js/runtime-main.a906f6ab.js.map",
     "static/js/2.d9cb863c.chunk.js": "/typescript-react-cocktails/static/js/2.d9cb863c.chunk.js",
     "static/js/2.d9cb863c.chunk.js.map": "/typescript-react-cocktails/static/js/2.d9cb863c.chunk.js.map",
     "index.html": "/typescript-react-cocktails/index.html",
-    "precache-manifest.ea6d689c1d454a0441dc89c12e2e64b5.js": "/typescript-react-cocktails/precache-manifest.ea6d689c1d454a0441dc89c12e2e64b5.js",
+    "precache-manifest.36a8e094366b4204c760f610570523e9.js": "/typescript-react-cocktails/precache-manifest.36a8e094366b4204c760f610570523e9.js",
     "service-worker.js": "/typescript-react-cocktails/service-worker.js",
     "static/css/main.c0257e38.chunk.css.map": "/typescript-react-cocktails/static/css/main.c0257e38.chunk.css.map",
     "static/js/2.d9cb863c.chunk.js.LICENSE.txt": "/typescript-react-cocktails/static/js/2.d9cb863c.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.a906f6ab.js",
     "static/js/2.d9cb863c.chunk.js",
     "static/css/main.c0257e38.chunk.css",
-    "static/js/main.1946ba56.chunk.js"
+    "static/js/main.94387aa7.chunk.js"
   ]
 }
