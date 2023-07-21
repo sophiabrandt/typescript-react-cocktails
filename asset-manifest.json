@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/typescript-react-cocktails/static/css/main.c0257e38.chunk.css",
-    "main.js": "/typescript-react-cocktails/static/js/main.94387aa7.chunk.js",
-    "main.js.map": "/typescript-react-cocktails/static/js/main.94387aa7.chunk.js.map",
-    "runtime-main.js": "/typescript-react-cocktails/static/js/runtime-main.a906f6ab.js",
-    "runtime-main.js.map": "/typescript-react-cocktails/static/js/runtime-main.a906f6ab.js.map",
-    "static/js/2.d9cb863c.chunk.js": "/typescript-react-cocktails/static/js/2.d9cb863c.chunk.js",
-    "static/js/2.d9cb863c.chunk.js.map": "/typescript-react-cocktails/static/js/2.d9cb863c.chunk.js.map",
+    "main.css": "/typescript-react-cocktails/static/css/main.1292ffbb.chunk.css",
+    "main.js": "/typescript-react-cocktails/static/js/main.8c79a49b.chunk.js",
+    "main.js.map": "/typescript-react-cocktails/static/js/main.8c79a49b.chunk.js.map",
+    "runtime-main.js": "/typescript-react-cocktails/static/js/runtime-main.ed05bb04.js",
+    "runtime-main.js.map": "/typescript-react-cocktails/static/js/runtime-main.ed05bb04.js.map",
+    "static/js/2.ece36333.chunk.js": "/typescript-react-cocktails/static/js/2.ece36333.chunk.js",
+    "static/js/2.ece36333.chunk.js.map": "/typescript-react-cocktails/static/js/2.ece36333.chunk.js.map",
     "index.html": "/typescript-react-cocktails/index.html",
-    "precache-manifest.36a8e094366b4204c760f610570523e9.js": "/typescript-react-cocktails/precache-manifest.36a8e094366b4204c760f610570523e9.js",
+    "precache-manifest.e1bc87a42b18e1adc69117d55d71f800.js": "/typescript-react-cocktails/precache-manifest.e1bc87a42b18e1adc69117d55d71f800.js",
     "service-worker.js": "/typescript-react-cocktails/service-worker.js",
-    "static/css/main.c0257e38.chunk.css.map": "/typescript-react-cocktails/static/css/main.c0257e38.chunk.css.map",
-    "static/js/2.d9cb863c.chunk.js.LICENSE.txt": "/typescript-react-cocktails/static/js/2.d9cb863c.chunk.js.LICENSE.txt"
+    "static/css/main.1292ffbb.chunk.css.map": "/typescript-react-cocktails/static/css/main.1292ffbb.chunk.css.map",
+    "static/js/2.ece36333.chunk.js.LICENSE.txt": "/typescript-react-cocktails/static/js/2.ece36333.chunk.js.LICENSE.txt",
+    "static/js/main.8c79a49b.chunk.js.LICENSE.txt": "/typescript-react-cocktails/static/js/main.8c79a49b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.a906f6ab.js",
-    "static/js/2.d9cb863c.chunk.js",
-    "static/css/main.c0257e38.chunk.css",
-    "static/js/main.94387aa7.chunk.js"
+    "static/js/runtime-main.ed05bb04.js",
+    "static/js/2.ece36333.chunk.js",
+    "static/css/main.1292ffbb.chunk.css",
+    "static/js/main.8c79a49b.chunk.js"
   ]
 }
