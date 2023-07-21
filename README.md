@@ -4,10 +4,10 @@
     <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
   </a>
   <a href="https://github.com/sophiabrandt/typescript-react-cocktails/commits/master" target="_blank">
-    <img alt="Build Status" src="https://img.shields.io/github/workflow/status/sophiabrandt/typescript-react-cocktails/Build%20TypeScript?logo=Github-Actions" />
+    <img alt="Build Status" src="https://github.com/sophiabrandt/typescript-react-cocktails/actions/workflows/build.yml/badge.svg" />
   </a>
-  <a href="https://twitter.com/hisophiabrandt" target="_blank">
-    <img alt="Twitter: hisophiabrandt" src="https://img.shields.io/twitter/follow/hisophiabrandt.svg?style=social" />
+  <a href="https://hachyderm.io/@sbr" target="_blank">
+  <img alt="Mastodon Follow" src="https://img.shields.io/mastodon/follow/109267187500756156?domain=https%3A%2F%2Fhachyderm.io">
   </a>
 </p>
 
@@ -52,7 +52,7 @@ npm run test
 👤 **Sophia Brandt**
 
 - Website: https://www.sophiabrandt.com
-- Twitter: [@hisophiabrandt](https://twitter.com/hisophiabrandt)
+- Mastodon: [@sbr@hachyderm.io](https://hachyderm.io/@sbr)
 - Github: [@sophiabrandt](https://github.com/sophiabrandt)
 
 ## Show your support
