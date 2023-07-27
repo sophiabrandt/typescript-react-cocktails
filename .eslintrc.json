@@ -1,9 +1,9 @@
 {
+  "root": true,
   "env": {
     "browser": true,
     "es6": true
   },
-  "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": 8,
     "sourceType": "module",
@@ -12,10 +12,8 @@
       "modules": true
     }
   },
-  "plugins": ["@typescript-eslint"],
   "extends": [
-    "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended",
+    "react-app",
     "plugin:prettier/recommended"
   ],
   "rules": {
@@ -23,7 +21,7 @@
   },
   "settings": {
     "react": {
-      "version": "detetect"
+      "version": "detect"
     }
   }
 }
